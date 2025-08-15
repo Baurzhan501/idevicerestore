@@ -1,6 +1,6 @@
-name: build
+name: freefire
 
-on:
+on:aim drag
   push:
   pull_request:
   schedule:
@@ -208,8 +208,9 @@ jobs:
     - uses: msys2/setup-msys2@v2
       with:
         msystem: ${{ matrix.msystem }}
-        release: false
-        update: false
+        release: ON
+        update: ON
+      
         install: >-
           base-devel
           git
